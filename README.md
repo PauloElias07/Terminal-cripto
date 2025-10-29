@@ -34,10 +34,9 @@ Bootstrap
 
 Gabriel da Silva Gutierres
 
-Paulo Elias
+Paulo Roberto Santos Elias
 
-Priscila Mendes
+Priscila de Carvalho Mendes
 
-📚 Objetivo Educacional
-
-O projeto foi desenvolvido com fins didáticos, permitindo compreender como redes neurais e modelos de aprendizado supervisionado podem ser aplicados em diferentes contextos — da previsão de dados à segurança da informação.
+👥Orientador
+Bruno Zolotareff
