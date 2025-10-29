@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Machine Learning Simples</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.14.0/dist/tf.min.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Terminal Cripto</h1>
+
+  <div class="tabs">
+    <div class="tab active" data-target="reg">Regressão Linear</div>
+    <div class="tab" data-target="crypto">Criptografia ML</div>
+  </div>
+
+  <!-- Painel de Regressão Linear -->
+  <div id="reg" class="panel active">
+    <h2>Regressão Linear</h2>
+    <p>O modelo aprende a relação <strong>y = 5x - 4</strong></p>
+    <input type="number" id="xValue" placeholder="Digite um valor para x">
+    <button onclick="predict()">Prever y</button>
+    <p id="regOutput"><span class="loader"></span> Treinando modelo...</p>
+  </div>
+
+  <!-- Painel de Criptografia -->
+  <div id="crypto" class="panel">
+    <h2>Criptografia com ML (substituição aleatória)</h2>
+    <p>O modelo aprende a cifrar texto usando mapeamento aleatório de letras.</p>
+    <input type="text" id="plainText" placeholder="Digite o texto (a-z)">
+    <button onclick="encrypt()">Criptografar</button>
+    <p id="cryptoOutput"><span class="loader"></span> Aguardando treinamento...</p>
+  </div>
+
+  <script src="/criptografia.js"></script>
+  <script src="/regressao.js"></script>
+  <script>
+    // Controle das abas
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.panel');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.target).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
